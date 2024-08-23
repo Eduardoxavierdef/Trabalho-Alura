@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Popular Games</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #000;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            position: relative; /* Necessário para o posicionamento absoluto do vídeo */
+        }
+
+        /* Área da imagem de cima com o vídeo */
+        .top-section {
+            width: 1366px; /* Largura fixa */
+            height: 768px; /* Altura fixa */
+            background-image: url('1.png'); /* Caminho da sua imagem superior */
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center; /* Centraliza verticalmente */
+            position: relative; /* Necessário para o posicionamento absoluto do vídeo */
+        }
+
+        .video-container {
+            position: absolute;
+            right: 2cm; /* 2 cm da borda direita */
+            top: 50%; /* Posiciona no meio vertical da seção */
+            transform: translateY(-50%) translateX(-2cm); /* Ajusta o vídeo para o meio vertical e move 2 cm para a esquerda */
+            width: 13cm; /* Largura em centímetros */
+            height: 8cm;  /* Altura em centímetros */
+        }
+
+        .video-frame {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        /* Área da imagem de baixo com os botões */
+        .bottom-section {
+            width: 1366px; /* Largura fixa */
+            height: 768px; /* Altura fixa */
+            background-image: url('2.png'); /* Caminho da sua imagem inferior */
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px; /* Espaço entre as seções */
+            padding: 0 2cm; /* Adiciona 2 cm de espaçamento dos lados */
+            box-sizing: border-box; /* Inclui o padding no cálculo da largura total */
+        }
+
+        .title {
+            font-size: 28px;
+            color: #fff;
+            margin-bottom: 20px;
+        }
+
+        .button-area {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%; /* Faz com que os botões ocupem toda a largura disponível */
+            max-width: 1366px; /* Largura máxima para a área dos botões */
+        }
+
+        .button {
+            width: 150px;
+            height: 150px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            font-weight: bold;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+            text-align: center;
+            position: relative;
+            background-color: transparent; /* Fundo transparente para a imagem aparecer */
+        }
+
+        .button img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Faz com que a imagem cubra o botão sem distorcer */
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1; /* Coloca a imagem atrás do texto */
+        }
+
+        .button:hover {
+            transform: scale(1.05); /* Efeito de zoom ao passar o mouse */
+        }
+
+        /* Cores de fundo dos botões */
+        .button:nth-child(1) {
+            background-color: #ff0000; /* Vermelho */
+        }
+
+        .button:nth-child(2) {
+            background-color: #00ff00; /* Verde */
+        }
+
+        .button:nth-child(3) {
+            background-color: #0000ff; /* Azul */
+        }
+
+        .button:nth-child(4) {
+            background-color: #ffff00; /* Amarelo */
+        }
+
+        .button:nth-child(5) {
+            background-color: #ff7f00; /* Laranja */
+        }
+    </style>
+</head>
+<body>
+    <!-- Seção de cima com a imagem e o vídeo -->
+    <div class="top-section">
+        <div class="video-container">
+            <iframe class="video-frame" src="https://www.youtube.com/embed/8kidZufjcVQ?si=L_pO73IAA_oTa0c3" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <!-- Seção de baixo com a imagem e os botões -->
+    <div class="bottom-section">
+        <div class="title">Escolha um Jogo</div>
+        <div class="button-area">
+            <a href="link1.html" class="button"><img src="4.png" alt="Link 1"> EDUARDO</a>
+            <a href="link2.html" class="button"><img src="5.png" alt="Link 2"> EVERTON</a>
+            <a href="link3.html" class="button"><img src="6.png" alt="Link 3"> GIANLUCCA</a>
+            <a href="link4.html" class="button"><img src="7.png" alt="Link 4"> MIGUEL</a>
+            <a href="link5.html" class="button"><img src="8.png" alt="Link 5"> KAUÊ</a>
+        </div>
+    </div>
+</body>
+</html>
